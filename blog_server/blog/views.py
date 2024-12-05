@@ -5,7 +5,8 @@ from django.urls import reverse
 
 # A simple view to render the index page
 def index(request):
-    return render(request, "index.html")
+    blog_title = "Dynamic new title"
+    return render(request, "index.html", {"blog_title": blog_title})
 
 # Optionally, you can create more views for different pages or actions in your app. 
 
